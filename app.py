@@ -35,6 +35,7 @@ def upload():
             if not os.path.exists( "images" ):
                 os.makedirs( "images" )
             save_file.save( os.path.join( app.config['UPLOAD_FOLDER'], save_file_name ) )
+
             return jsonify( "file save to queue" ), 200
     else:
         return jsonify( "Request method error" ), 200
