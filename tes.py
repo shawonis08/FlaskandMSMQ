@@ -18,5 +18,6 @@ import time
 #
 # msgqueue.Close()
 
-timestr = time.strftime("%d%m%y%H%M%S")
-print (timestr)
+
+if not os.path.exists( "images/" + time.strftime("%d%m%y%H%M")):
+    os.makedirs( "images/" + time.strftime("%d%m%y%H%M") )
